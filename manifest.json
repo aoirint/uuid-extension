@@ -1,0 +1,16 @@
+{
+  "name": "uuid-extension",
+  "manifest_version": 2,
+  "version": "0.1.0",
+  "description": "uuid",
+  "permissions": [
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": [
+      "vendor/uuid/uuidv4.min.js",
+      "src/background.js"
+    ],
+    "persistent": false
+  }
+}
