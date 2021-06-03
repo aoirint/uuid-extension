@@ -1,5 +1,5 @@
 
-chrome.runtime.onInstalled.addListener(function(){
+chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     type: 'normal',
     id: 'copy-uuid',
@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener(function(){
   })
 })
 
-chrome.contextMenus.onClicked.addListener(function(item){
+chrome.contextMenus.onClicked.addListener((item) => {
   if (item.menuItemId === 'copy-uuid') {
     const textArea = document.createElement('textarea')
     document.body.appendChild(textArea)
